@@ -5,6 +5,10 @@
  */
 package notepadjava;
 
+import controlador.Controler;
+import modelo.ModeloLogico;
+import vista.FrmVentana;
+
 /**
  *
  * @author FERNE
@@ -16,6 +20,10 @@ public class NotepadJava {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FrmVentana ventana = new FrmVentana();
+        ModeloLogico model = new ModeloLogico();
+        Controler controlador = new Controler(ventana, model);
+        ventana.setVisible(true);
     }
     
 }
